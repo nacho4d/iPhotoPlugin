@@ -239,11 +239,13 @@
 		9A6837FB148BC31500CF5B7B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CONFIGURATION_BUILD_DIR = /Applications/iPhoto.app/Contents/PlugIns/;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ExampleExport/ExampleExport-Prefix.pch";
 				INFOPLIST_FILE = "ExampleExport/ExampleExport-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYMROOT = build;
 				WRAPPER_EXTENSION = iPhotoExporter;
 			};
 			name = Debug;
@@ -256,6 +258,7 @@
 				INFOPLIST_FILE = "ExampleExport/ExampleExport-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYMROOT = build;
 				WRAPPER_EXTENSION = iPhotoExporter;
 			};
 			name = Release;

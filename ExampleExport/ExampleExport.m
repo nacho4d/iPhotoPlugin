@@ -47,23 +47,12 @@
 }
 
 - (void)startExport:(id)fp8 {
-	/*
-	 - (unsigned int)albumCount;
-	 - (unsigned int)imageCountAtAlbumIndex:(unsigned int)arg1;
-	 - (id)albumNameAtIndex:(unsigned int)arg1;
-	 - (id)albumMusicPathAtIndex:(unsigned int)arg1;
-	 - (id)albumCommentsAtIndex:(unsigned int)arg1;
-	 - (id)albumsOfImageAtIndex:(unsigned int)arg1;
-	 - (unsigned int)positionOfImageAtIndex:(unsigned int)arg1 inAlbum:(unsigned int)arg2;
-	 */
-	
-    NSLog(@"ExampleExport -- startExport");
-	
-	// @@ change this example code
+	//fp8 argument is an NSString (in fact is one of its clusters NSStorePath2)
+    NSLog(@"ExampleExport -- %@ start", NSStringFromSelector(_cmd));
 	
 	// open the file passed in as a parameter
     FILE *stream = fopen([fp8 UTF8String], "w");
-	NSLog(@"****** PLUGIN ***** %@", [fp8 UTF8String]);
+	NSLog(@"Exporting to: %s", [fp8 UTF8String]);
 
     fprintf(stream, "iPhoto Example Export\n");
 	fprintf(stream, "=====================\n");
@@ -75,10 +64,7 @@
 		fprintf(stream, "Album Comments (%d): %s\n", i+1, [[exportManager albumCommentsAtIndex:i] UTF8String]);
 	}
 
-	
-	
-	int i;
-	for(i = 0; i < [exportManager imageCount]; i++) {
+	for(int i = 0; i < [exportManager imageCount]; i++) {
 		fprintf(stream, "\nImage %d\n", (i+1));
 		fprintf(stream, "-------------\n");
 		fprintf(stream, "Path: %s\n", [[exportManager imagePathAtIndex: i] UTF8String]);
@@ -86,14 +72,15 @@
         fprintf(stream, "Date: %s\n", [[[exportManager imageDateAtIndex: i] description] UTF8String]);
 		
 		NSArray *keywords = [exportManager imageKeywordsAtIndex: i];
-		int j;
-		for(j = 0; j < [keywords count]; j++) {
+		for(int j = 0; j < [keywords count]; j++) {
 			fprintf(stream, "Keyword: %s\n", [[keywords objectAtIndex:j] UTF8String]);
 		}
 		fprintf(stream, "Comments: %s\n", [[exportManager imageCommentsAtIndex: i] UTF8String]);
 	}
 	
     fclose(stream);
+	
+	NSLog(@"ExampleExport -- %@ end", NSStringFromSelector(_cmd));
 }
 
 - (BOOL)validateUserCreatedPath:(id)fp8 {
@@ -154,13 +141,11 @@
 }
 
 - (id)initWithExportImageObj:(id)fp8 {
-	// @@ change this
-   	if(self = [super init]) {
+	self = [super init];
+   	if (self) {
 		exportManager = fp8;
-		//[NSBundle loadNibNamed: @"ExampleExport" owner:self];
 	}
 	return self;
-} 
-
+}
 
 @end
