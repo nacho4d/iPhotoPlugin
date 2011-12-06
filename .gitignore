@@ -1,0 +1,10 @@
+# Ignore finder indexing files
+*.DS_Store
+
+# Ignore Xcode files
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcuserstate
+xcuserdata/
