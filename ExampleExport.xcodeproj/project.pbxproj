@@ -9,14 +9,29 @@
 /* Begin PBXBuildFile section */
 		9A6837F0148BC31500CF5B7B /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A6837EF148BC31500CF5B7B /* CoreFoundation.framework */; };
 		9A6837F6148BC31500CF5B7B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A6837F4148BC31500CF5B7B /* InfoPlist.strings */; };
+		9A683807148BD73B00CF5B7B /* ExampleExport.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A683806148BD73B00CF5B7B /* ExampleExport.m */; };
+		9A68380B148BE04300CF5B7B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A68380A148BE04300CF5B7B /* Cocoa.framework */; };
+		9A68380D148BE16800CF5B7B /* ExampleExport.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A68380C148BE16800CF5B7B /* ExampleExport.xib */; };
+		9A683812148BE31300CF5B7B /* ExampleBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A683811148BE31300CF5B7B /* ExampleBox.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9A6837EC148BC31500CF5B7B /* ExampleExport.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleExport.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A6837EC148BC31500CF5B7B /* ExampleExport.iPhotoExporter */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleExport.iPhotoExporter; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A6837EF148BC31500CF5B7B /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
-		9A6837F3148BC31500CF5B7B /* ExampleExport-Info.plist */ = {isa = PBXFileReference; path = "ExampleExport-Info.plist"; sourceTree = "<group>"; };
+		9A6837F3148BC31500CF5B7B /* ExampleExport-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ExampleExport-Info.plist"; sourceTree = "<group>"; };
 		9A6837F5148BC31500CF5B7B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		9A6837F7148BC31500CF5B7B /* ExampleExport-Prefix.pch */ = {isa = PBXFileReference; path = "ExampleExport-Prefix.pch"; sourceTree = "<group>"; };
+		9A6837F7148BC31500CF5B7B /* ExampleExport-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ExampleExport-Prefix.pch"; sourceTree = "<group>"; };
+		9A683801148BD6CA00CF5B7B /* ExportImageProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExportImageProtocol.h; sourceTree = "<group>"; };
+		9A683802148BD6CA00CF5B7B /* ExportMgr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExportMgr.h; sourceTree = "<group>"; };
+		9A683803148BD6CA00CF5B7B /* ExportPluginBoxProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExportPluginBoxProtocol.h; sourceTree = "<group>"; };
+		9A683804148BD6CA00CF5B7B /* ExportPluginProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExportPluginProtocol.h; sourceTree = "<group>"; };
+		9A683805148BD73B00CF5B7B /* ExampleExport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExampleExport.h; sourceTree = "<group>"; };
+		9A683806148BD73B00CF5B7B /* ExampleExport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExampleExport.m; sourceTree = "<group>"; };
+		9A683809148BDBE800CF5B7B /* CDStructures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDStructures.h; sourceTree = "<group>"; };
+		9A68380A148BE04300CF5B7B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		9A68380C148BE16800CF5B7B /* ExampleExport.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExampleExport.xib; sourceTree = "<group>"; };
+		9A683810148BE31300CF5B7B /* ExampleBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExampleBox.h; path = ../ExampleBox.h; sourceTree = "<group>"; };
+		9A683811148BE31300CF5B7B /* ExampleBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExampleBox.m; path = ../ExampleBox.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A68380B148BE04300CF5B7B /* Cocoa.framework in Frameworks */,
 				9A6837F0148BC31500CF5B7B /* CoreFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -43,7 +59,7 @@
 		9A6837ED148BC31500CF5B7B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9A6837EC148BC31500CF5B7B /* ExampleExport.bundle */,
+				9A6837EC148BC31500CF5B7B /* ExampleExport.iPhotoExporter */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,6 +67,7 @@
 		9A6837EE148BC31500CF5B7B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A68380A148BE04300CF5B7B /* Cocoa.framework */,
 				9A6837EF148BC31500CF5B7B /* CoreFoundation.framework */,
 			);
 			name = Frameworks;
@@ -59,6 +76,12 @@
 		9A6837F1148BC31500CF5B7B /* ExampleExport */ = {
 			isa = PBXGroup;
 			children = (
+				9A683808148BD74300CF5B7B /* iPhotoHeaders */,
+				9A683805148BD73B00CF5B7B /* ExampleExport.h */,
+				9A683806148BD73B00CF5B7B /* ExampleExport.m */,
+				9A68380C148BE16800CF5B7B /* ExampleExport.xib */,
+				9A683810148BE31300CF5B7B /* ExampleBox.h */,
+				9A683811148BE31300CF5B7B /* ExampleBox.m */,
 				9A6837F2148BC31500CF5B7B /* Supporting Files */,
 			);
 			path = ExampleExport;
@@ -72,6 +95,18 @@
 				9A6837F7148BC31500CF5B7B /* ExampleExport-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9A683808148BD74300CF5B7B /* iPhotoHeaders */ = {
+			isa = PBXGroup;
+			children = (
+				9A683809148BDBE800CF5B7B /* CDStructures.h */,
+				9A683801148BD6CA00CF5B7B /* ExportImageProtocol.h */,
+				9A683802148BD6CA00CF5B7B /* ExportMgr.h */,
+				9A683803148BD6CA00CF5B7B /* ExportPluginBoxProtocol.h */,
+				9A683804148BD6CA00CF5B7B /* ExportPluginProtocol.h */,
+			);
+			name = iPhotoHeaders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,7 +126,7 @@
 			);
 			name = ExampleExport;
 			productName = ExampleExport;
-			productReference = 9A6837EC148BC31500CF5B7B /* ExampleExport.bundle */;
+			productReference = 9A6837EC148BC31500CF5B7B /* ExampleExport.iPhotoExporter */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -126,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A6837F6148BC31500CF5B7B /* InfoPlist.strings in Resources */,
+				9A68380D148BE16800CF5B7B /* ExampleExport.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +172,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A683807148BD73B00CF5B7B /* ExampleExport.m in Sources */,
+				9A683812148BE31300CF5B7B /* ExampleBox.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,7 +195,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -183,7 +221,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -206,7 +244,7 @@
 				INFOPLIST_FILE = "ExampleExport/ExampleExport-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = bundle;
+				WRAPPER_EXTENSION = iPhotoExporter;
 			};
 			name = Debug;
 		};
@@ -218,7 +256,7 @@
 				INFOPLIST_FILE = "ExampleExport/ExampleExport-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = bundle;
+				WRAPPER_EXTENSION = iPhotoExporter;
 			};
 			name = Release;
 		};
@@ -241,6 +279,7 @@
 				9A6837FC148BC31500CF5B7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

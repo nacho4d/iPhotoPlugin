@@ -42,5 +42,9 @@
 	<string></string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2011 Information Architects. All rights reserved.</string>
+	<key>NSPrincipalClass</key>
+	<string>ExampleExport</string>
+	<key>NSMainNibFile</key>
+	<string>ExampleExport</string>
 </dict>
 </plist>
